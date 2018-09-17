@@ -64,12 +64,14 @@ h2, a {
 	color: #f4cd76;
 	text-transform: uppercase;
 	text-decoration: none;
+	letter-spacing: 0.2em;
 }
 
 p {
 	font-weight: 400;
 	font-family: "nunito", sans-serif;
 	color: #fff;
+	line-height: 2em;
 }
 
 footer p {
@@ -144,7 +146,7 @@ header .desktop-nav.show {
 @media screen and (min-width: 768px) {
 	header .logo {
 		margin-left: 9%;
-		padding-right: 56%;
+		padding-right: 55%;
 	}
 }
 
@@ -185,6 +187,139 @@ header .search {
 @media screen and (max-width: 767px) {
 	header .search {
 		display: none;
+	}
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 767px) {
+	.hero-content {
+		width: 85%;
+		margin: 30% auto;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hero-content {
+		width: 75%;
+		margin: 15% auto;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.hero-content {
+		width: 65%;
+	}
+}
+
+@media screen and (min-width: 1224px) {
+	.hero-content {
+		width: 55%;
+	}
+}
+
+.hero-content .icons, .hero-content .hero-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.hero-content .icons {
+	margin-right: 20px;
+	align-items: center;
+}
+
+.hero-content .icons div {
+	margin: 20px 0;
+	background-color: #ed6f6e;
+	width: 50px;
+	height: 0;
+	padding-bottom: 100%;
+	border-radius: 100%;
+	transition: .8s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+	.hero-content .icons div {
+		width: 40px;
+		margin: 10px 0 20px 0;
+	}
+}
+
+.hero-content .icons div:hover {
+	cursor: pointer;
+	transform: scale(0);
+}
+
+.hero-content .icons .star, .hero-content .icons .share {
+	width: 15px;
+	padding: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+	.hero-content .icons .star, .hero-content .icons .share {
+		padding: 40px 0;
+	}
+}
+
+.hero-content .icons .star {
+	transition: 1s ease-in-out;
+}
+
+.hero-content .icons .star:hover {
+	cursor: pointer;
+	transform: rotate(-360deg);
+}
+
+.hero-content .icons .share {
+	transition: 1s ease-in-out;
+}
+
+.hero-content .icons .share:hover {
+	cursor: pointer;
+	transform: rotateY(-360deg);
+}
+
+@media screen and (max-width: 767px) {
+	.hero-content .hero-text h1 {
+		font-size: 40px;
+		margin-bottom: 50px;
+		line-height: 1.2em;
+	}
+	.hero-content .hero-text h2 {
+		margin-bottom: 50px;
+		font-size: 0.9em;
+	}
+	.hero-content .hero-text p {
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hero-content .hero-text {
+		margin-left: 7%;
+	}
+	.hero-content .hero-text h1 {
+		font-size: 50px;
+		line-height: 1.5em;
+		white-space: nowrap;
+	}
+	.hero-content .hero-text h2 {
+		margin-top: 40px;
+		margin-bottom: 60px;
+		font-size: 0.9em;
+	}
+	.hero-content .hero-text p {
+		font-size: 0.9em;
+		max-width: 777px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.hero-content .hero-text h1 {
+		font-size: 60px;
 	}
 }
 
