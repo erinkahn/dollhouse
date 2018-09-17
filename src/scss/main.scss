@@ -1,0 +1,110 @@
+
+@import 'reset';
+
+// FONTS and COLORS
+h1{ font-family: "poppins",sans-serif; color: #fff; font-size: 64px;}
+h2, a{ font-weight: 800; font-family: "nunito",sans-serif; color: #f4cd76; text-transform: uppercase; text-decoration: none;}
+p{ font-weight: 400; font-family: "nunito", sans-serif; color: #fff;}
+footer p { font-family: "Myriad Pro", Myriad, "helvetica", sans-serif; }
+$pink: #ed6f6e;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #1f1d1d;
+}
+
+.overlay-cast-bkg{ 
+	background-image: url('../img/castGlow.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100%;
+}
+
+
+.burger{
+
+	div{
+		height: 4px;
+		width: 30px;
+		background-color: $pink;
+		left: 30px;
+		position: absolute;
+		transition: .2s ease-in-out;
+		@media screen and (min-width: 768px){
+			left: 5%;
+		}
+		
+		&:first-child{
+			top: 5%;		
+		}
+		&:nth-child(2){
+			top: 6%;
+		}
+		&:last-child{
+			top: 7%;
+		}
+	}
+}
+
+header{
+	display: flex;
+	margin: 35px auto;
+	width: 94%;
+
+	.desktop-nav{
+		display: none;
+		// show on burger click
+		&.show{
+			display: flex;
+		}
+	}
+
+	.logo{
+		@media screen and (max-width: 767px){
+			position: absolute;
+			top: 4%;
+			right: 5%;
+		}
+		@media screen and (min-width: 768px){
+			margin-left: 9%;
+			padding-right: 56%;
+		}
+		@media screen and (min-width: 1024px){
+			padding-right: 60%;
+		}
+	}
+
+	.pink-line{
+		@media screen and (max-width: 767px){
+			display: none;
+		}
+		background-color: #ed6f6e; 
+		width: 2px;
+		height: 30px;
+		@media screen and (min-width: 768px){
+			margin-right: 17%;
+		}
+		@media screen and (min-width: 1024px){
+			margin-right: 18%;
+		}
+		
+	}
+
+	.search{
+		@media screen and (max-width: 767px){
+			display: none;
+		}
+		height: 26px;
+	}
+
+
+}
+
+
+
+
+

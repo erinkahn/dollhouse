@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1 {
+	font-family: "poppins",sans-serif;
+	color: #fff;
+	font-size: 64px;
+}
+
+h2, a {
+	font-weight: 800;
+	font-family: "nunito",sans-serif;
+	color: #f4cd76;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+p {
+	font-weight: 400;
+	font-family: "nunito", sans-serif;
+	color: #fff;
+}
+
+footer p {
+	font-family: "Myriad Pro", Myriad, "helvetica", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #1f1d1d;
+}
+
+.overlay-cast-bkg {
+	background-image: url("../img/castGlow.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100%;
+}
+
+.burger div {
+	height: 4px;
+	width: 30px;
+	background-color: #ed6f6e;
+	left: 30px;
+	position: absolute;
+	transition: .2s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+	.burger div {
+		left: 5%;
+	}
+}
+
+.burger div:first-child {
+	top: 5%;
+}
+
+.burger div:nth-child(2) {
+	top: 6%;
+}
+
+.burger div:last-child {
+	top: 7%;
+}
+
+header {
+	display: flex;
+	margin: 35px auto;
+	width: 94%;
+}
+
+header .desktop-nav {
+	display: none;
+}
+
+header .desktop-nav.show {
+	display: flex;
+}
+
+@media screen and (max-width: 767px) {
+	header .logo {
+		position: absolute;
+		top: 4%;
+		right: 5%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header .logo {
+		margin-left: 9%;
+		padding-right: 56%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	header .logo {
+		padding-right: 60%;
+	}
+}
+
+header .pink-line {
+	background-color: #ed6f6e;
+	width: 2px;
+	height: 30px;
+}
+
+@media screen and (max-width: 767px) {
+	header .pink-line {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header .pink-line {
+		margin-right: 17%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	header .pink-line {
+		margin-right: 18%;
+	}
+}
+
+header .search {
+	height: 26px;
+}
+
+@media screen and (max-width: 767px) {
+	header .search {
+		display: none;
+	}
+}
+
+/*# sourceMappingURL=main.css.map */
