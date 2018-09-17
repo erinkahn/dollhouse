@@ -226,6 +226,36 @@ header{
 
 
 
+
+.dollhouse{
+	position: relative;
+	// cant see on mobile
+	@media screen and (max-width: 767px){
+		z-index: 4;
+		background-image: url('../img/mobileRoom.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 0;
+		padding-bottom: 69%;
+		width: 100%;	
+	}
+	// show room on desktop
+	background-image: url('../img/bedroom.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 0;
+	padding-bottom: 69%;
+	width: 100%;
+
+	&:hover{
+		cursor: url("../img/magnifying.png"), auto;
+	}
+	
+  
+}
+
+
+
 footer{
 	margin: 30% auto;
 	width: 85%;
