@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":["console","log"],"mappings":";;AAAAA,QAAQC,GAAR","file":"main.js","sourcesContent":["console.log(`Hello World from app.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.`)"]}
+{"version":3,"sources":["main.js"],"names":["console","log"],"mappings":"AAAAA,QAAQC,GAAR,CAAa,0BAAb;;AAGA;AACA","file":"main.js","sourcesContent":["console.log(`Hello World from app.js!`)\n\n\n// var tl = new TimelineMax();\n// tl.fromTo('.footer-text', 1, {opacity: 0, left: -2000});"]}

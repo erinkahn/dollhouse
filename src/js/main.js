@@ -1,3 +1,5 @@
-console.log(`Hello World from app.js! 
-Change this message, and make sure it changes in the browser 
-to verify that you're working in the right files.`)
+console.log(`Hello World from app.js!`)
+
+
+// var tl = new TimelineMax();
+// tl.fromTo('.footer-text', 1, {opacity: 0, left: -2000});
