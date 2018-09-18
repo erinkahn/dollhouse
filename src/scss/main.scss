@@ -248,11 +248,69 @@ header{
 	width: 100%;
 
 	&:hover{
-		cursor: url("../img/magnifying.png"), auto;
+		cursor: url("../img/magnifying.png"), pointer;
+	}
+
+	// text shows on hover
+	div[data-descr]{
+		transition: 1s ease-in-out;
+
+		&:hover::after{
+			content: attr(data-descr);
+			position: absolute;
+			left: 140%;
+			top: 120%;
+			min-width: 200px;
+			border: 1px solid #ed6f6e;
+			color: #ed6f6e;
+			border-radius: 10px;
+			background-color: #f4cd76;
+			z-index: 1;
+			padding: 10px;
+			line-height: 1.3em;
+			font-family: poppins, sans-serif;
+			font-size: 0.8em;
+		}
+	}
+
+
+	.bottle, .wrench, .needle, .etchedWord, .sistersPic{
+		position: absolute;
+		background-color: transparent;
+		width: 30px;
+		height: 0;
+		padding-bottom: 30px;
+		border-radius: 100%;
+	}
+
+	.etchedWord{
+		top: 33%;
+		left: 26%;
+	}
+
+	.wrench{
+		top: 81%;
+		left: 37%;
+	}
+
+	.sistersPic{
+		top: 57%;
+		left: 33%;
+	}
+
+	.bottle{
+		top: 70%;
+		left: 9%;
+	}
+
+	.needle{
+		top: 53%;
+		right: 24%;
 	}
 	
-  
 }
+
+
 
 
 

@@ -379,7 +379,62 @@ header .search {
 }
 
 .dollhouse:hover {
-	cursor: url("../img/magnifying.png"), auto;
+	cursor: url("../img/magnifying.png"), pointer;
+}
+
+.dollhouse div[data-descr] {
+	transition: 1s ease-in-out;
+}
+
+.dollhouse div[data-descr]:hover::after {
+	content: attr(data-descr);
+	position: absolute;
+	left: 140%;
+	top: 120%;
+	min-width: 200px;
+	border: 1px solid #ed6f6e;
+	color: #ed6f6e;
+	border-radius: 10px;
+	background-color: #f4cd76;
+	z-index: 1;
+	padding: 10px;
+	line-height: 1.3em;
+	font-family: poppins, sans-serif;
+	font-size: 0.8em;
+}
+
+.dollhouse .bottle, .dollhouse .wrench, .dollhouse .needle, .dollhouse .etchedWord, .dollhouse .sistersPic {
+	position: absolute;
+	background-color: transparent;
+	width: 30px;
+	height: 0;
+	padding-bottom: 30px;
+	border-radius: 100%;
+}
+
+.dollhouse .etchedWord {
+	top: 33%;
+	left: 26%;
+}
+
+.dollhouse .wrench {
+	top: 81%;
+	left: 37%;
+}
+
+.dollhouse .sistersPic {
+	top: 57%;
+	left: 33%;
+}
+
+.dollhouse .bottle {
+	top: 70%;
+	left: 9%;
+}
+
+.dollhouse .needle {
+	top: 53%;
+	right: 24%;
 }
 
 footer {
