@@ -26,10 +26,29 @@ body {
 
 
 .burger{
+	z-index: 50000;
+	&:hover{
+		cursor: pointer;
+	}
+
+	&.open div:first-child{
+		transform: translate(10px, 13px) rotate(-45deg);
+		transition: .4s ease-in-out;
+		width: 20px;
+	}
+	&.open div:nth-child(2){
+		display: none;
+	}
+	&.open div:last-child{
+		transition: .4s ease-in-out;
+		transform: translate(-3px, -10px) rotate(45deg);
+		width: 20px;
+	}
 
 	div{
 		height: 4px;
 		width: 30px;
+		z-index: 50000;
 		background-color: $pink;
 		left: 30px;
 		position: absolute;
@@ -39,7 +58,7 @@ body {
 		}
 		
 		&:first-child{
-			top: 5%;		
+			top: 5%;
 		}
 		&:nth-child(2){
 			top: 6.3%;
@@ -57,17 +76,40 @@ header{
 
 	.desktop-nav{
 		display: none;
+
 		// show on burger click
 		&.show{
+			background-color: #1f1d1d;
 			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			margin: 20% auto;
+			z-index: 400;
+			@media screen and (min-width: 768px){
+				font-size: 2em;
+			}
+
+			ul{
+				
+				li{
+					margin: 25px 0;
+					a{
+						
+						white-space: nowrap;
+					}
+				}
+			}
+
 		}
 	}
 
 	.logo{
+		z-index: 50000;
+		position: absolute;
+		
 		@media screen and (max-width: 767px){
-			position: absolute;
 			top: 4%;
-			right: 5%;
+			right: 8%;
 		}
 		@media screen and (min-width: 768px){
 			margin-left: 9%;
@@ -79,26 +121,27 @@ header{
 	}
 
 	.pink-line{
+		z-index: 50000;
 		@media screen and (max-width: 767px){
 			display: none;
 		}
 		background-color: #ed6f6e; 
 		width: 2px;
 		height: 30px;
-		@media screen and (min-width: 768px){
-			margin-right: 17%;
-		}
-		@media screen and (min-width: 1024px){
-			margin-right: 18%;
-		}
+		position: absolute;
+		right: 27%;
 		
 	}
 
 	.search{
+		z-index: 50000;
 		@media screen and (max-width: 767px){
 			display: none;
 		}
 		height: 26px;
+		position: absolute;
+		right: 6%;
+	
 	}
 
 
