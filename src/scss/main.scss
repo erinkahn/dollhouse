@@ -6,6 +6,7 @@ h1{ font-family: "poppins",sans-serif; color: #fff; font-size: 64px; }
 h2, a{ font-weight: 800; font-family: "nunito",sans-serif; color: #f4cd76; text-transform: uppercase; text-decoration: none; letter-spacing: 0.2em;}
 p{ font-weight: 400; font-family: "nunito", sans-serif; color: #fff;  line-height: 2.3em;}
 footer p { font-family: "Myriad Pro", Myriad, "helvetica", sans-serif; }
+h3{ font-family: "poppins", sans-serif; color: #762337; letter-spacing: 0.2em; font-size: 30px;}
 $pink: #ed6f6e;
 
 
@@ -504,3 +505,94 @@ footer{
 }
 
 
+
+
+// cast page grid
+
+.cast-grid{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	@media screen and (min-width: 768px){
+		width: 90%;
+		margin-top: -90px;
+	}
+	@media screen and (min-width: 1024px){
+		width: 80%;
+	}
+
+	div{
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 0;
+		padding-bottom: 100%;
+		width: 100%;
+		position: relative;
+
+		@media screen and (min-width: 768px){
+			width: 50%;
+			background-size: contain;
+			padding-bottom: 58.3%;
+		}
+		@media screen and (min-width: 1024px){
+			width: 25%;
+			background-size: contain;
+			padding-bottom: 29%;
+		}
+
+		&:hover{
+			h3, h2, .arrow{
+				display: block;
+				z-index: 3000;
+			}
+			-webkit-filter: blur(0.5px);
+			-moz-filter: blur(1px);
+			-o-filter: blur(1px);
+			-ms-filter: blur(1px);
+			filter: blur(2px);
+		}
+
+		h3, h2, .arrow{
+			display: none;
+			z-index: 3000;
+			filter: none;
+			filter: blur(0px);
+		}
+
+		h2{
+			color: #fff;
+		}
+
+		.arrow{
+			background-color: #762337;
+			padding: 10px;
+			border-radius: 100%;
+		}
+
+		&:first-child{
+			background-image: url('../img/Camille Preaker _ Amy Adams Real Name.png');
+		}
+		&:nth-child(2){
+			background-image: url('../img/Adora Crellin _ Patricia Clarkson real names.png');
+		}
+		&:nth-child(3){
+			background-image: url('../img/Amma Crellin _ Eliza Scanlen real names.png');
+		}
+		&:nth-child(4){
+			background-image: url('../img/Richard Willis _ Chris Messina real name.png');
+		}
+		&:nth-child(5){
+			background-image: url('../img/Chief Bill Vickery _ Matt Craven real names.png');
+		}
+		&:nth-child(6){
+			background-image: url('../img/John Keene _ Taylor John Smith real names.png');
+		}
+		&:nth-child(7){
+			background-image: url('../img/Jackie O_ Neil _ Elizabeth Perkins real name.png');
+		}
+		&:last-child{
+			background-image: url('../img/Allan Crellin _ Henry Czerny real name.png');
+		}
+		
+	}
+}
