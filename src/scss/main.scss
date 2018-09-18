@@ -8,6 +8,7 @@ p{ font-weight: 400; font-family: "nunito", sans-serif; color: #fff;  line-heigh
 footer p { font-family: "Myriad Pro", Myriad, "helvetica", sans-serif; }
 $pink: #ed6f6e;
 
+
 * {
 	box-sizing: border-box;
 }
@@ -26,6 +27,13 @@ body {
 
 
 .burger{
+
+	&.cast{
+		@media screen and (min-width: 768px){
+			display: none;
+		}
+	}
+	
 	z-index: 50000;
 	&:hover{
 		cursor: pointer;
@@ -76,9 +84,9 @@ header{
 
 	.desktop-nav{
 		display: none;
-
+		
 		// show on burger click
-		&.show{
+		&.show, &.cast{
 			background-color: #1f1d1d;
 			display: flex;
 			justify-content: center;
@@ -86,16 +94,40 @@ header{
 			margin: 20% auto;
 			z-index: 400;
 			@media screen and (min-width: 768px){
-				font-size: 2em;
+				flex-direction: row;
+				margin: 10% auto;
 			}
 
 			ul{
 				
 				li{
 					margin: 25px 0;
+					@media screen and (min-width: 768px){
+						margin: 25px 20px;
+					}
+					
 					a{
-						
 						white-space: nowrap;
+						position: relative;
+						@media screen and (min-width: 768px){
+							font-size: 0.8em;
+						}
+
+						&:hover, &.active {
+							
+							&:after, {
+								content: "";
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								left: 0%;
+								border-radius: inherit;
+								border-bottom: 2px solid #ed6f6e;
+								z-index: 200000;
+							}
+								
+						}
+						
 					}
 				}
 			}
@@ -112,8 +144,12 @@ header{
 			right: 8%;
 		}
 		@media screen and (min-width: 768px){
-			margin-left: 9%;
+			margin-left: 10%;
 			padding-right: 55%;
+
+			&.cast{
+				margin-left: 3%;
+			}
 		}
 		@media screen and (min-width: 1024px){
 			padding-right: 60%;
