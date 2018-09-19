@@ -7,3 +7,8 @@ document.querySelector('.burger').addEventListener('click', function() {
     TweenMax.staggerFrom('.desktop-nav ul li a', 1, {opacity: 0, top: -2000, ease:Power4.easeOut}, 0.1);
 })
 
+window.onload = function() {
+    TweenMax.staggerFrom(".icons", 2, {scale:0.5, opacity:0, delay:0.5, ease:Power4.easeOut}, 1);
+    TweenMax.staggerFrom(".cast-grid", 2, {opacity:0, xPercent: -100, delay:0.5, ease:Power4.easeOut}, 1);
+
+}
