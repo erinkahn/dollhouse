@@ -580,7 +580,7 @@ footer .footer-text h2 {
 	margin-bottom: 10px;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
 	footer .footer-text h2 {
 		margin-right: 25px;
 	}
@@ -690,83 +690,13 @@ footer .footer-text p {
 }
 
 .cast-grid div {
+	transition: .2s ease-in-out;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 0;
 	padding-bottom: 117%;
 	width: 100%;
 	position: relative;
-}
-
-@media screen and (min-width: 768px) {
-	.cast-grid div {
-		width: 50%;
-		background-size: contain;
-		padding-bottom: 58.3%;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.cast-grid div {
-		width: 25%;
-		background-size: contain;
-		padding-bottom: 29%;
-	}
-}
-
-.cast-grid div:hover h3, .cast-grid div:hover h2, .cast-grid div:hover .arrow {
-	display: block;
-	z-index: 3000;
-	text-align: center;
-	position: absolute;
-	filter: none;
-	filter: blur(0px);
-}
-
-.cast-grid div h3, .cast-grid div h2, .cast-grid div .arrow {
-	display: none;
-	z-index: 3000;
-}
-
-.cast-grid div h3 {
-	transform: translate(-50%);
-	left: 50%;
-	bottom: 15%;
-	white-space: nowrap;
-}
-
-@media screen and (min-width: 1024px) {
-	.cast-grid div h3 {
-		font-size: 1.5em;
-		bottom: 18%;
-	}
-}
-
-.cast-grid div h2 {
-	color: #fff;
-	transform: translate(-50%);
-	left: 50%;
-	bottom: 10%;
-	white-space: nowrap;
-}
-
-@media screen and (min-width: 1024px) {
-	.cast-grid div h2 {
-		font-size: 0.8em;
-	}
-}
-
-.cast-grid div .arrow {
-	background-color: #762337;
-	padding: 10px;
-	border-radius: 100%;
-	right: 5%;
-	top: 5%;
-}
-
-.cast-grid div .arrow:hover {
-	background-color: #ed6f6e;
-	cursor: pointer;
 }
 
 .cast-grid div:first-child {
@@ -801,13 +731,136 @@ footer .footer-text p {
 	background-image: url("../img/Allan Crellin _ Henry Czerny real name.png");
 }
 
+@media screen and (min-width: 768px) {
+	.cast-grid div {
+		width: 50%;
+		background-size: contain;
+		padding-bottom: 58.3%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.cast-grid div {
+		width: 25%;
+		background-size: contain;
+		padding-bottom: 29%;
+	}
+}
+
+.cast-grid div:hover {
+	cursor: pointer;
+}
+
+.cast-grid div:hover:first-child {
+	background-image: url("../img/blurCamille.png");
+}
+
+.cast-grid div:hover:nth-child(2) {
+	background-image: url("../img/blurAdora.png");
+}
+
+.cast-grid div:hover:nth-child(3) {
+	background-image: url("../img/blurAmma.png");
+}
+
+.cast-grid div:hover:nth-child(4) {
+	background-image: url("../img/blurRichard.png");
+}
+
+.cast-grid div:hover:nth-child(5) {
+	background-image: url("../img/blurChief.png");
+}
+
+.cast-grid div:hover:nth-child(6) {
+	background-image: url("../img/blurJohn.png");
+}
+
+.cast-grid div:hover:nth-child(7) {
+	background-image: url("../img/blurJackie.png");
+}
+
+.cast-grid div:hover:last-child {
+	background-image: url("../img/blurAllan.png");
+}
+
+.cast-grid div:hover h3, .cast-grid div:hover h2, .cast-grid div:hover .arrow {
+	display: block;
+	z-index: 3000;
+	text-align: center;
+	position: absolute;
+}
+
+.cast-grid div h3, .cast-grid div h2, .cast-grid div .arrow {
+	display: none;
+	z-index: 3000;
+}
+
+.cast-grid div h3 {
+	transform: translate(-50%);
+	left: 50%;
+	bottom: 15%;
+	white-space: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+	.cast-grid div h3 {
+		font-size: 1.2em;
+		bottom: 18%;
+	}
+}
+
+@media screen and (min-width: 1224px) {
+	.cast-grid div h3 {
+		font-size: 1.3em;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.cast-grid div h3 {
+		font-size: 1.5em;
+	}
+}
+
+.cast-grid div h2 {
+	color: #fff;
+	transform: translate(-50%);
+	left: 50%;
+	bottom: 10%;
+	white-space: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+	.cast-grid div h2 {
+		font-size: 0.8em;
+	}
+}
+
+.cast-grid div .arrow {
+	background-color: #762337;
+	padding: 10px;
+	border-radius: 100%;
+	right: 5%;
+	top: 5%;
+	transition: .2s ease-in-out;
+}
+
+.cast-grid div .arrow:hover {
+	background-color: #ed6f6e;
+	cursor: pointer;
+}
+
 .see-more {
 	margin: 10% auto;
-	width: 40%;
+	width: 45%;
 	display: flex;
 	justify-content: center;
 	background-color: #762337;
 	border-radius: 40px;
+	transition: .2s ease-in-out;
+}
+
+.see-more:hover {
+	background-color: #ed6f6e;
 }
 
 @media screen and (min-width: 768px) {
