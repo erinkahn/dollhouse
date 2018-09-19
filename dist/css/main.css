@@ -734,7 +734,6 @@ footer .footer-text p {
 @media screen and (min-width: 768px) {
 	.cast-grid div {
 		width: 50%;
-		background-size: contain;
 		padding-bottom: 58.3%;
 	}
 }
@@ -742,7 +741,6 @@ footer .footer-text p {
 @media screen and (min-width: 1024px) {
 	.cast-grid div {
 		width: 25%;
-		background-size: contain;
 		padding-bottom: 29%;
 	}
 }
@@ -791,6 +789,7 @@ footer .footer-text p {
 }
 
 .cast-grid div h3, .cast-grid div h2, .cast-grid div .arrow {
+	transition: .2s ease-in-out;
 	display: none;
 	z-index: 3000;
 }

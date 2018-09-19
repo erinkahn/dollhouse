@@ -557,12 +557,10 @@ footer{
 
 		@media screen and (min-width: 768px){
 			width: 50%;
-			background-size: contain;
 			padding-bottom: 58.3%;
 		}
 		@media screen and (min-width: 1024px){
 			width: 25%;
-			background-size: contain;
 			padding-bottom: 29%;
 		}
 
@@ -604,12 +602,12 @@ footer{
 		
 
 		h3, h2, .arrow{
+			transition: .2s ease-in-out;
 			display: none;
 			z-index: 3000;
 		}
 
 		h3{
-			
 			transform: translate(-50%);
 			left: 50%;
 			bottom: 15%;
