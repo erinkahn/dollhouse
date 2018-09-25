@@ -121,6 +121,12 @@ body {
 	width: 20px;
 }
 
+@media screen and (max-width: 767px) {
+	.burger.open div:first-child {
+		transform: translate(9px, 7px) rotate(-45deg);
+	}
+}
+
 .burger.open div:nth-child(2) {
 	display: none;
 }
@@ -169,7 +175,24 @@ header .desktop-nav {
 	display: none;
 }
 
-header .desktop-nav.show, header .desktop-nav.cast {
+@media screen and (min-width: 768px) {
+	header .desktop-nav.cast {
+		background-color: #1f1d1d;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		margin: 20% auto;
+		z-index: 400;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	header .desktop-nav.cast {
+		margin: 10% auto;
+	}
+}
+
+header .desktop-nav.show {
 	background-color: #1f1d1d;
 	display: flex;
 	justify-content: center;
@@ -179,34 +202,34 @@ header .desktop-nav.show, header .desktop-nav.cast {
 }
 
 @media screen and (min-width: 768px) {
-	header .desktop-nav.show, header .desktop-nav.cast {
+	header .desktop-nav.show {
 		flex-direction: row;
 		margin: 10% auto;
 	}
 }
 
-header .desktop-nav.show ul li, header .desktop-nav.cast ul li {
+header .desktop-nav ul li {
 	margin: 25px 0;
 }
 
 @media screen and (min-width: 768px) {
-	header .desktop-nav.show ul li, header .desktop-nav.cast ul li {
+	header .desktop-nav ul li {
 		margin: 25px 20px;
 	}
 }
 
-header .desktop-nav.show ul li a, header .desktop-nav.cast ul li a {
+header .desktop-nav ul li a {
 	white-space: nowrap;
 	position: relative;
 }
 
 @media screen and (min-width: 768px) {
-	header .desktop-nav.show ul li a, header .desktop-nav.cast ul li a {
+	header .desktop-nav ul li a {
 		font-size: 0.8em;
 	}
 }
 
-header .desktop-nav.show ul li a:hover:after, header .desktop-nav.show ul li a.active:after, header .desktop-nav.cast ul li a:hover:after, header .desktop-nav.cast ul li a.active:after {
+header .desktop-nav ul li a:hover:after, header .desktop-nav ul li a.active:after {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -673,7 +696,8 @@ footer .footer-text p {
 .cast-grid {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 auto;
+	margin: 27% auto;
+	margin-bottom: 10%;
 }
 
 @media screen and (min-width: 768px) {
@@ -686,6 +710,7 @@ footer .footer-text p {
 @media screen and (min-width: 1024px) {
 	.cast-grid {
 		width: 80%;
+		margin-bottom: 5%;
 	}
 }
 

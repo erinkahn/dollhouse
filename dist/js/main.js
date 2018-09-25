@@ -11,4 +11,12 @@ window.onload = function () {
     TweenMax.staggerFrom(".icons", 2, { scale: 0.5, opacity: 0, delay: 0.5, ease: Power4.easeOut }, 1);
     TweenMax.staggerFrom(".cast-grid", 2, { opacity: 0, xPercent: -100, delay: 0.5, ease: Power4.easeOut }, 1);
 };
+
+let grid = document.querySelectorAll('.cast-grid div');
+
+for (let i = 0; i < grid.length; i++) {
+    grid[i].addEventListener('click', function () {
+        document.querySelectorAll('cast-grid div').classList.toggle('showHoverContent');
+    });
+}
 //# sourceMappingURL=main.js.map
